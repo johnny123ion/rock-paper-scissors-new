@@ -44,34 +44,29 @@ function playRound(click) {
   if (comp == 'rock' && player == 'paper') {
     ++playerWin
     resultAfterRound.innerText = `You ➔ 📄\nComputer ➔ 🪨\nYou won!`
-    playerScore.innerText = `Your score: ${playerWin}`
-    computerScore.innerText = `Computer score: ${compWin}`
+
   } else if (comp == 'rock' && player == 'scissors') {
     ++compWin
     resultAfterRound.innerText = `You ➔ ✂️\nComputer ➔ 🪨\nYou lost!`
-    playerScore.innerText = `Your score: ${playerWin}`
-    computerScore.innerText = `Computer score: ${compWin}`
+
   } else if (comp == 'scissors' && player == 'paper') {
     ++compWin
     resultAfterRound.innerText = `You ➔ 📄\nComputer ➔ ✂️\nYou lost!`
-    playerScore.innerText = `Your score: ${playerWin}`
-    computerScore.innerText = `Computer score: ${compWin}`
+
   } else if (comp == 'scissors' && player == 'rock') {
     ++playerWin
     resultAfterRound.innerText = `You ➔ 🪨\nComputer ➔ ✂️\nYou won!`
-    playerScore.innerText = `Your score: ${playerWin}`
-    computerScore.innerText = `Computer score: ${compWin}`
+
   } else if (comp == 'paper' && player == 'rock') {
     ++compWin
     resultAfterRound.innerText = `You ➔ 🪨\nComputer ➔ 📄\nYou lost!`
-    playerScore.innerText = `Your score: ${playerWin}`
-    computerScore.innerText = `Computer score: ${compWin}`
+
   } else if (comp == 'paper' && player == 'scissors') {
     ++playerWin
     resultAfterRound.innerText = `You ➔ ✂️\nComputer ➔ 📄\nYou won!`
-    playerScore.innerText = `Your score: ${playerWin}`
-    computerScore.innerText = `Computer score: ${compWin}`
+
   } else if (comp == player) {
+    
     if (comp == 'rock') {
       resultAfterRound.innerText = `You both chose 🪨\nDraw!`
     } else if (comp == 'paper') {
@@ -80,7 +75,9 @@ function playRound(click) {
       resultAfterRound.innerText = `You both chose ✂️\nDraw!`
     }
     
-    playerScore.innerText = `Your score: ${playerWin}`
-    computerScore.innerText = `Computer score: ${compWin}`
   }
+
+  playerScore.innerText = `Your score: ${playerWin}`
+  computerScore.innerText = `Computer score: ${compWin}`
+
 }
